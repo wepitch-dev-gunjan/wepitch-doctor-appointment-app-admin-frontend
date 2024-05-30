@@ -1,0 +1,11 @@
+// Example mixin for box-shadow
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+}
+
+// Example mixin for flex-center
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

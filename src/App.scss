@@ -1,0 +1,12 @@
+@import "./styles/variables";
+@import "./styles/mixins";
+
+.app {
+  font-family: $font-family-base;
+  background-color: $background-color;
+  padding: $spacing-large;
+
+  h2 {
+    color: $text-color;
+  }
+}
