@@ -5,7 +5,7 @@ import {
   RouterProvider
 } from "react-router-dom";
 import router from './routes/index'
-import { AdminProvider } from './setup/states-management/AdminContext';
+import { AdminProvider } from './setup/states/AdminContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

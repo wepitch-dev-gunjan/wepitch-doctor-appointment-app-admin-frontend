@@ -1,11 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import AppointmentManagement from "../pages/appointmentManagement";
-import DashBoard from "../pages/dashboard";
+// import DashBoard from "../pages/dashboard";
+import DashBoard from "../pages/dashBoard"
 import DoctorManagement from "../pages/doctorManagement";
 import Settings from "../pages/settings";
 import Analytics from "../pages/analytics";
-import { AppointmentProvider } from "../setup/states-management";
+import { AppointmentProvider } from "../setup/states"
 
 const router = createBrowserRouter([
   {
