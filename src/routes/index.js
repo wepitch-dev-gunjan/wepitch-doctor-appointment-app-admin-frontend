@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout";
 import AppointmentManagement from "../pages/appointmentManagement";
-// import Dashboard from "../pages/dashboard";
 import DoctorManagement from "../pages/doctorManagement";
 import Settings from "../pages/settings";
 import Analytics from "../pages/analytics";
@@ -11,6 +10,7 @@ import ErrorBoundary from "../common/components/errorBoundary";
 import Login from "../pages/login";
 import ProtectedRoute from "../common/components/protectedRoutes";
 import { LayoutProvider } from "../setup/states/LayoutContext";
+import Dashboard from "../pages/dashboard";
 
 const router = createBrowserRouter([
   {
@@ -41,16 +41,16 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
-      // {
-      //   path: "dashboard",
-      //   element: (
-      //     <ProtectedRoute>
-      //       <DashboardProvider>
-      //         <Dashboard />
-      //       </DashboardProvider>
-      //     </ProtectedRoute>
-      //   ),
-      // },
+      {
+        path: "dashboard",
+        element: (
+          <ProtectedRoute>
+            <DashboardProvider>
+              <Dashboard />
+            </DashboardProvider>
+          </ProtectedRoute>
+        ),
+      },
       {
         path: "login",
         element: <Login />,
