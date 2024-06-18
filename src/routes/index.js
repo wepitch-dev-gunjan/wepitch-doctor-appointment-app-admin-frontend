@@ -10,7 +10,7 @@ import ErrorBoundary from "../common/components/errorBoundary";
 import Login from "../pages/login";
 import ProtectedRoute from "../common/components/protectedRoutes";
 import { LayoutProvider } from "../setup/states/LayoutContext";
-import Dashboard from "../pages/dashboard/index.jsx";
+import Dashboard from "../pages/dashboard/index";
 
 const router = createBrowserRouter([
   {
