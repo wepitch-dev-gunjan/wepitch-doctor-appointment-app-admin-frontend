@@ -1,0 +1,17 @@
+.Sidebar-container {
+  display: flex;
+  flex-direction: column;
+  .SidebarElement-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    background-color: antiquewhite;
+    padding: 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(145, 133, 117);
+    }
+  }
+}

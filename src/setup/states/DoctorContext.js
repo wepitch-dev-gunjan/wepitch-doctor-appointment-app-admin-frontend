@@ -3,9 +3,9 @@ import { createContext, useState } from "react";
 export const DoctorContext = createContext();
 
 export const DoctorProvider = ({ children }) => {
-  const [admin, setAdmin] = useState({})
+  const [doctors, setDoctors] = useState({})
   return <DoctorContext.Provider value={{
-    admin, setAdmin
+    doctors, setDoctors
   }}>
     {children}
   </DoctorContext.Provider>

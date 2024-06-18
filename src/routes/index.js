@@ -1,43 +1,90 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "../App";
+import Layout from "../Layout";
 import AppointmentManagement from "../pages/appointmentManagement";
-// import DashBoard from "../pages/dashboard";
-import DashBoard from "../pages/dashBoard"
+import Dashboard from "../pages/dashboard";
 import DoctorManagement from "../pages/doctorManagement";
 import Settings from "../pages/settings";
 import Analytics from "../pages/analytics";
-import { AppointmentProvider } from "../setup/states"
+import { AdminProvider, AppointmentProvider, DashboardProvider, AuthProvider } from "../setup/states";
+import Profile from "../pages/profile";
+import ErrorBoundary from "../common/components/errorBoundary";
+import Login from "../pages/login";
+import ProtectedRoute from "../common/components/protectedRoutes";
+import { LayoutProvider } from "../setup/states/AdminContext copy";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: (
+      <AuthProvider>
+        <LayoutProvider>
+          <Layout />
+        </LayoutProvider>
+      </AuthProvider>
+    ),
     children: [
       {
         path: "analytics",
-        element: <Analytics />
+        element: (
+          <ProtectedRoute>
+            <Analytics />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "appointment-management",
-        element: <AppointmentProvider>
-          <AppointmentManagement />
-        </AppointmentProvider>
+        element: (
+          <ProtectedRoute>
+            <AppointmentProvider>
+              <AppointmentManagement />
+            </AppointmentProvider>
+          </ProtectedRoute>
+        ),
       },
       {
         path: "dashboard",
-        element: <DashBoard />
+        element: (
+          <ProtectedRoute>
+            <DashboardProvider>
+              <Dashboard />
+            </DashboardProvider>
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "profile",
+        element: (
+          <ProtectedRoute>
+            <ErrorBoundary>
+              <AdminProvider>
+                <Profile />
+              </AdminProvider>
+            </ErrorBoundary>
+          </ProtectedRoute>
+        ),
       },
       {
         path: "doctor-management",
-        element: <DoctorManagement />
+        element: (
+          <ProtectedRoute>
+            <DoctorManagement />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "settings",
-        element: <Settings />
-      }
-    ]
-  }
-
+        element: (
+          <ProtectedRoute>
+            <Settings />
+          </ProtectedRoute>
+        ),
+      },
+    ],
+  },
 ]);
 
-export default router
+export default router;

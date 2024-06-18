@@ -1,0 +1,22 @@
+.ErrorBoundary-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 4px;
+}
+
+.ErrorBoundary-container p {
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.ErrorBoundary-container p:first-child {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
