@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout";
 import AppointmentManagement from "../pages/appointmentManagement";
-import Dashboard from "../pages/dashboard";
+// import Dashboard from "../pages/dashboard";
 import DoctorManagement from "../pages/doctorManagement";
 import Settings from "../pages/settings";
 import Analytics from "../pages/analytics";
@@ -41,16 +41,16 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
-      {
-        path: "dashboard",
-        element: (
-          <ProtectedRoute>
-            <DashboardProvider>
-              <Dashboard />
-            </DashboardProvider>
-          </ProtectedRoute>
-        ),
-      },
+      // {
+      //   path: "dashboard",
+      //   element: (
+      //     <ProtectedRoute>
+      //       <DashboardProvider>
+      //         <Dashboard />
+      //       </DashboardProvider>
+      //     </ProtectedRoute>
+      //   ),
+      // },
       {
         path: "login",
         element: <Login />,
