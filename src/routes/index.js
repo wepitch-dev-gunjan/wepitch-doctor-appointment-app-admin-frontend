@@ -10,7 +10,7 @@ import ErrorBoundary from "../common/components/errorBoundary";
 import Login from "../pages/login";
 import ProtectedRoute from "../common/components/protectedRoutes";
 import { LayoutProvider } from "../setup/states/LayoutContext";
-import Dashboard from "../pages/dashboard";
+// import Dashboard from "../pages/dashboard";
 
 const router = createBrowserRouter([
   {
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <DashboardProvider>
-              <Dashboard />
+              <Login />
             </DashboardProvider>
           </ProtectedRoute>
         ),
