@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "./common/components/sidebar";
 import Navbar from "./common/components/navbar";
 import ProfileMenu from "./common/components/navbar/profileMenu";
-import { LayoutContext } from "./setup/states/AdminContext copy";
+import { LayoutContext } from "./setup/states/LayoutContext";
 
 const Layout = () => {
   const { profileMenuEnable } = useContext(LayoutContext)

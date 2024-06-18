@@ -10,7 +10,7 @@ import Profile from "../pages/profile";
 import ErrorBoundary from "../common/components/errorBoundary";
 import Login from "../pages/login";
 import ProtectedRoute from "../common/components/protectedRoutes";
-import { LayoutProvider } from "../setup/states/AdminContext copy";
+import { LayoutProvider } from "../setup/states/LayoutContext";
 
 const router = createBrowserRouter([
   {

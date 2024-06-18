@@ -1,7 +1,7 @@
 import { useContext, useRef } from "react";
 import "./style.scss"
 import useClickOutside from "../../../hooks/useClickOutside";
-import { LayoutContext } from "../../../../setup/states/AdminContext copy";
+import { LayoutContext } from "../../../../setup/states/LayoutContext";
 
 const ProfileMenu = () => {
   const profileMenuRef = useRef(null)

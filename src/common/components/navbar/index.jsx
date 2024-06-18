@@ -4,7 +4,7 @@ import Avatar from './Avatar';
 import Search from './Search';
 import './style.scss'
 import { useContext } from 'react';
-import { LayoutContext } from '../../../setup/states/AdminContext copy';
+import { LayoutContext } from '../../../setup/states/LayoutContext';
 
 const Navbar = ({ logo, search }) => {
   const { setProfileMenuEnable } = useContext(LayoutContext)
