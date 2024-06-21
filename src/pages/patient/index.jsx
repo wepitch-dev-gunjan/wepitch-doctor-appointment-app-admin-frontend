@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.scss"; // Import the SCSS file
-import PersonalDetail from "../../components/patient/personalDetail";
-import GeneralInfo from "../../components/patient/generalInfo";
-import MedicalCondition from "../../components/patient/medicalCondition";
+import PersonalDetail from "../../common/components/patient/personalDetail";
+import GeneralInfo from "../../common/components/patient/generalInfo";
+import MedicalCondition from "../../common/components/patient/medicalCondition";
 
 const PatientForm = () => {
   return (
