@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout";
-import AppointmentManagement from "../pages/appointmentManagement";
-import DoctorManagement from "../pages/doctorManagement";
+import AppointmentManagement from "../pages/appointments";
+import Doctors from "../pages/dostors";
 import Settings from "../pages/settings";
 import Analytics from "../pages/analytics";
 import {
@@ -16,7 +16,8 @@ import Login from "../pages/login";
 import ProtectedRoute from "../common/components/protectedRoutes";
 import { LayoutProvider } from "../setup/states/LayoutContext";
 import Dashboard from "../pages/dashboard";
-import PatientForm from "../pages/patient";
+import Patients from "../pages/patients";
+import Admins from "../pages/admins";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
     ),
     errorElement: <ErrorBoundary />,
     children: [
+      {
+        path: "login",
+        element: <Login />
+      },
       {
         path: "analytics",
         element: (
@@ -56,11 +61,15 @@ const router = createBrowserRouter([
               <Dashboard />
             </DashboardProvider>
           </ProtectedRoute>
-        ),
+        )
       },
       {
-        path: "login",
-        element: <PatientForm />,
+        path: "patients",
+        element: (
+          <ProtectedRoute>
+            <Patients />
+          </ProtectedRoute>
+        )
       },
       {
         path: "profile",
@@ -73,10 +82,10 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "doctor-management",
+        path: "doctors",
         element: (
           <ProtectedRoute>
-            <DoctorManagement />
+            <Doctors />
           </ProtectedRoute>
         ),
       },

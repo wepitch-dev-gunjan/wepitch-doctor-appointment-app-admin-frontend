@@ -17,43 +17,39 @@ export default config;
 
 
 export const sidebarElements = [
-  // Dashboard
   {
     text: "Dashboard",
     icon: <MdDashboard />,
     onClick: function (navigate) {
       navigate('/dashboard')
-    },
-    children: [
-      {
-        text: "Dashboard",
-        icon: <MdDashboard />
-      }
-    ]
+    }
   },
-
-  // Analytics
   {
-    text: "Analytics",
+    text: "Admins",
+    icon: <IoAnalyticsSharp />,
+    onClick: function (navigate) {
+      navigate('/admins')
+    }
+  },
+  {
+    text: "analytics",
     icon: <IoAnalyticsSharp />,
     onClick: function (navigate) {
       navigate('/analytics')
     }
   },
-
-  // Appointment Management
   {
-    text: "Appointment Management",
+    text: "Appointments",
     icon: <AiOutlineSchedule />,
     onClick: function (navigate) {
-      navigate('/appointment-management')
+      navigate('/appointments')
     }
   },
   {
-    text: "My Doctors",
+    text: "Doctors",
     icon: <GiDoctorFace />,
     onClick: function (navigate) {
-      navigate('/doctor-management')
+      navigate('/doctors')
     }
   },
 ]

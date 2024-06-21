@@ -4,7 +4,7 @@ import PersonalDetail from "../../common/components/patient/personalDetail";
 import GeneralInfo from "../../common/components/patient/generalInfo";
 import MedicalCondition from "../../common/components/patient/medicalCondition";
 
-const PatientForm = () => {
+const Patients = () => {
   return (
     <div className="patient-form">
       <form>
@@ -17,4 +17,4 @@ const PatientForm = () => {
   );
 };
 
-export default PatientForm;
+export default Patients;
