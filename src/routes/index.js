@@ -4,13 +4,19 @@ import AppointmentManagement from "../pages/appointmentManagement";
 import DoctorManagement from "../pages/doctorManagement";
 import Settings from "../pages/settings";
 import Analytics from "../pages/analytics";
-import { AdminProvider, AppointmentProvider, DashboardProvider, AuthProvider } from "../setup/states";
+import {
+  AdminProvider,
+  AppointmentProvider,
+  DashboardProvider,
+  AuthProvider,
+} from "../setup/states";
 import Profile from "../pages/profile";
 import ErrorBoundary from "../common/components/errorBoundary";
 import Login from "../pages/login";
 import ProtectedRoute from "../common/components/protectedRoutes";
 import { LayoutProvider } from "../setup/states/LayoutContext";
 import Dashboard from "../pages/dashboard";
+import PatientForm from "../pages/patient";
 
 const router = createBrowserRouter([
   {
@@ -54,7 +60,7 @@ const router = createBrowserRouter([
       },
       {
         path: "login",
-        element: <Login />,
+        element: <PatientForm />,
       },
       {
         path: "profile",

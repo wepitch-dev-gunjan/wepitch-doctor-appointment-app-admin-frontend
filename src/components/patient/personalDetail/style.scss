@@ -1,13 +1,5 @@
-.patient-form {
-  // max-width: 600px;
-  margin: auto;
-  height: 95%;
-  // padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  // overflow-y: scroll;
-
+.personal-detail {
+  width: 100%;
   h2 {
     margin-top: 0;
     font-size: 1.5em;
@@ -20,11 +12,12 @@
   }
   .personalData {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
     .form-group {
       margin-bottom: 15px;
-      // display: flex;
 
       label {
         // display: block;
@@ -47,22 +40,5 @@
         padding: 0;
       }
     }
-  }
-
-  button {
-    display: inline-block;
-    padding: 10px 15px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  button:hover {
-    background-color: #0056b3;
   }
 }

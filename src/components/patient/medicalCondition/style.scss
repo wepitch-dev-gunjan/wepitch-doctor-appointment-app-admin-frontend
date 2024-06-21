@@ -1,0 +1,46 @@
+.medical-condition {
+  h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+  }
+
+  p {
+    font-size: 0.9em;
+    color: #666;
+  }
+  .Symptoms-Title {
+    width: 600px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+
+    label {
+      //   display: block;
+      font-size: 0.85em;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input,
+    select,
+    textarea {
+      width: calc(100% - 22px);
+      padding: 10px;
+      font-size: 0.9em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    input[type="file"] {
+      padding: 0;
+    }
+
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+  }
+}
