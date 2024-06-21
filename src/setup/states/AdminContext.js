@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
-import { getProfile } from "../../pages/profile/apis";
+import { fetchProfile } from "../../pages/profile/apis/apiServices";
 import ScreenLoader from "../../common/components/loaders/ScreenLoader";
 
 export const AdminContext = createContext();
@@ -10,10 +10,10 @@ export const AdminProvider = ({ children }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    getProfile()
+    fetchProfile()
       .then((response) => {
         if (response) {
-          setAdmin(response.data);
+          setAdmin(response);
         } else {
           setError(new Error("No profile data found"));
         }

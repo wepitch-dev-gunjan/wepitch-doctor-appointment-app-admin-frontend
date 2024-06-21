@@ -22,6 +22,7 @@ const router = createBrowserRouter([
         </LayoutProvider>
       </AuthProvider>
     ),
+    errorElement: <ErrorBoundary />,
     children: [
       {
         path: "analytics",
@@ -59,11 +60,9 @@ const router = createBrowserRouter([
         path: "profile",
         element: (
           <ProtectedRoute>
-            <ErrorBoundary>
-              <AdminProvider>
-                <Profile />
-              </AdminProvider>
-            </ErrorBoundary>
+            <AdminProvider>
+              <Profile />
+            </AdminProvider>
           </ProtectedRoute>
         ),
       },

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../setup/states";
 import { login } from "./apis";
+import "./style.scss"
 
 const Login = () => {
   const { isAuthenticated, setIsAuthenticated, email, setEmail, password, setPassword } = useContext(AuthContext);
@@ -27,21 +28,25 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Login Page</h1>
-      <div>
-        <label>
-          Email:
-          <input type="email" value={email} onChange={handleEmailChange} />
-        </label>
+    <div className="Login-container">
+      <div className="main-container">
+        <div className="login-left">
+          <div className="left-container">
+            <h1>Doctor App Admin</h1>
+            <p>Log in to access the dashboard</p>
+            <form>
+              <label>Email</label>
+              <input type="email" value={email} onChange={handleEmailChange} />
+              <label>Password</label>
+              <input type="password" value={password} onChange={handlePasswordChange} />
+            </form>
+            <div className="login-button" onClick={handleLogin}>Log in</div>
+          </div>
+        </div>
+        <div className="right">
+          <img src="" alt="login-image" />
+        </div>
       </div>
-      <div>
-        <label>
-          Password:
-          <input type="password" value={password} onChange={handlePasswordChange} />
-        </label>
-      </div>
-      <button onClick={handleLogin}>Login</button>
     </div>
   );
 };
