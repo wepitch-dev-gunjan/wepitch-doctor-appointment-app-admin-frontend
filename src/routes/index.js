@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout";
-import AppointmentManagement from "../pages/appointments";
 import Doctors from "../pages/dostors";
 import Settings from "../pages/settings";
 import Analytics from "../pages/analytics";
@@ -18,6 +17,7 @@ import { LayoutProvider } from "../setup/states/LayoutContext";
 import Dashboard from "../pages/dashboard";
 import Patients from "../pages/patients";
 import Admins from "../pages/admins";
+import AppointmentManagement from "../pages/appointments";
 
 const router = createBrowserRouter([
   {
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "login",
-        element: <Doctors />,
+        element: <AppointmentManagement />,
       },
       {
         path: "analytics",
