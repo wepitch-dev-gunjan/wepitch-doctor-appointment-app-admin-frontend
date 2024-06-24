@@ -33,7 +33,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "login",
-        element: <Login />
+        element: <Doctors />,
       },
       {
         path: "analytics",
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
               <Dashboard />
             </DashboardProvider>
           </ProtectedRoute>
-        )
+        ),
       },
       {
         path: "patients",
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
           <ProtectedRoute>
             <Patients />
           </ProtectedRoute>
-        )
+        ),
       },
       {
         path: "profile",
